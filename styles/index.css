@@ -20,6 +20,12 @@ body {
   align-items: center;
   padding: 1.5rem;
 }
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem;
+    min-height: 100svh;
+  }
+}
 .hero__wrapper {
   width: 100%;
   max-width: 850px;

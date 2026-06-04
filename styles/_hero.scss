@@ -13,6 +13,11 @@
     align-items: center;
     padding: 1.5rem;
 
+    @media (max-width: 480px) {
+        padding: 1rem;
+        min-height: 100svh;
+    }
+
     &__wrapper {
         width: 100%;
         max-width: 850px;
@@ -93,6 +98,8 @@
     font-size: 1rem;
     color: #333;
     outline: none;
+
+    
 
     &::placeholder {
       color: $color-text-placeholder;
