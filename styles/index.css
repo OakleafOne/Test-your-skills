@@ -310,4 +310,98 @@ body {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.steps {
+  background-color: #333333;
+  padding: 6rem 2rem 8rem 2rem;
+  color: #FFFFFF;
+}
+.steps__container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .steps__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+.steps__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+.steps__icon-container {
+  width: 65px;
+  height: 65px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+.steps__icon-container--search {
+  border-color: #5474FD;
+}
+.steps__icon-container--select {
+  border-color: #FF6B00;
+}
+.steps__icon-container--book {
+  border-color: #46b3e6;
+}
+.steps__icon-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 220px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  transform: translateY(-100%);
+}
+@media (max-width: 950px) {
+  .steps__icon-container::after {
+    width: 160px;
+  }
+}
+@media (max-width: 768px) {
+  .steps__icon-container::after {
+    display: none;
+  }
+}
+.steps__item:last-child .steps__icon-container::after {
+  display: none !important;
+}
+.steps__icon-img {
+  display: block;
+  width: 28px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.steps__title {
+  font-family: "Aleo", serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.01rem;
+  color: rgba(255, 255, 255, 0.95);
 }/*# sourceMappingURL=index.css.map */
