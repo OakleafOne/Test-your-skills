@@ -1,8 +1,12 @@
+@use 'sass:color';
+@use 'variables' as *;
+
 .hero {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../images/hero-background.jpg') no-repeat center center/cover;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
+                url('../images/hero-background.png') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,6 +78,52 @@
         animation: bounce 2s infinite;
     }
 }
+
+.search-group {
+  display: flex;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  &__input {
+    flex: 1;
+    border: none;
+    padding: 1.25rem 1.5rem;
+    font-family: $font-sans;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+
+    &::placeholder {
+      color: $color-text-placeholder;
+    }
+  }
+
+  &__btn {
+    background-color: $color-accent;
+    color: $color-white !important;
+    border: none;
+    padding: 0 2.5rem;
+    font-family: $font-sans;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-width: 160px;
+    transition: background-color 0.2s ease;
+
+    &:hover, &:focus {
+      background-color: color.scale($color-accent, $lightness: -10%);
+      outline: none;
+    }
+  }
+}
+
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
