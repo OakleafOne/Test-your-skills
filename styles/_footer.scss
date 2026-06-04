@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+.footer {
+  background-color: #1a1a1a;
+  padding: 4.5rem 2rem;
+  color: $color-white;
+  text-align: center;
+
+  &__container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    font-family: $font-headings;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.15rem;
+  }
+
+  &__slogan {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    color: rgba($color-white, 0.6);
+    margin-bottom: 2.5rem;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+
+    a {
+      color: $color-white;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+      display: inline-block;
+
+      &:hover, &:focus {
+        transform: translateY(-3px);
+        color: rgba($color-white, 0.7);
+      }
+    }
+
+    &--linkedin {
+      color: #46b3e6 !important; 
+
+      &:hover, &:focus {
+        color: lighten(#46b3e6, 10%) !important;
+      }
+    }
+  }
+}

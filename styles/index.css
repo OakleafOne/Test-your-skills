@@ -247,6 +247,7 @@ body {
   margin-bottom: 3rem;
 }
 .why-choose__text p {
+  font-family: "Josefin Sans", serif;
   margin-bottom: 1.5rem;
 }
 .why-choose__btn {
@@ -289,7 +290,7 @@ body {
 }
 .why-choose__img-wrapper {
   position: absolute;
-  width: 65%;
+  width: 48%;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
   border-radius: 2px;
   overflow: hidden;
@@ -297,12 +298,10 @@ body {
 .why-choose__img-wrapper--top {
   top: 0;
   right: 0;
-  z-index: 2;
 }
 .why-choose__img-wrapper--bottom {
   bottom: 0;
   left: 0;
-  z-index: 1;
 }
 .why-choose__img {
   display: block;
@@ -505,4 +504,137 @@ body {
 }
 .destination__btn:active {
   transform: scale(0.97);
+}
+
+.testimonials {
+  padding: 6rem 2rem 8rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../images/tourist-bg.png") no-repeat center center/cover;
+  color: #FFFFFF;
+  text-align: center;
+}
+.testimonials__container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.testimonials__heading {
+  font-family: "Aleo", serif;
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 400;
+  margin-bottom: 4rem;
+  letter-spacing: 0.05rem;
+}
+.testimonials__card {
+  display: flex;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .testimonials__card {
+    flex-direction: column;
+  }
+}
+.testimonials__img-box {
+  flex: 1.1;
+  background-color: #333;
+}
+@media (max-width: 768px) {
+  .testimonials__img-box {
+    height: 250px;
+  }
+}
+.testimonials__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.testimonials__content {
+  flex: 1.3;
+  background-color: rgba(40, 40, 40, 0.95);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 480px) {
+  .testimonials__content {
+    padding: 2rem 1.5rem;
+  }
+}
+.testimonials__name {
+  font-family: "Aleo", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.testimonials__quote-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.testimonials__quote-icon {
+  color: #5474FD;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+.testimonials__text {
+  font-family: "Aleo", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  padding: 4.5rem 2rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+.footer__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.footer__logo {
+  font-family: "Aleo", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.15rem;
+}
+.footer__slogan {
+  font-family: "Aleo", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2.5rem;
+}
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+}
+.footer__socials a {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+.footer__socials a:hover, .footer__socials a:focus {
+  transform: translateY(-3px);
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer__socials--linkedin {
+  color: #46b3e6 !important;
+}
+.footer__socials--linkedin:hover, .footer__socials--linkedin:focus {
+  color: rgb(114.9285714286, 197.4571428571, 236.0714285714) !important;
 }/*# sourceMappingURL=index.css.map */
