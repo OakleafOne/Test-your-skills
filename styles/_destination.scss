@@ -1,0 +1,112 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+.destination {
+  width: 100%;
+  overflow: hidden;
+
+  &__banner {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &--pool {
+      background-image: url('../images/pool-hotel.png'); 
+    }
+
+    &--cliff {
+      background-image: url('../images/sunset-cliff.png'); 
+    }
+
+    @media (max-width: 768px) {
+      min-height: auto;
+      padding: 4rem 1rem;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+
+    &--reverse {
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: center !important;
+      padding: 0;
+    }
+  }
+
+  &__card {
+    background-color: rgba(35, 35, 35, 0.85);
+    padding: 3.5rem;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    text-align: left;
+
+    @media (max-width: 480px) {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  &__country {
+    font-family: $font-sans;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: rgba($color-white, 0.7);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-family: $font-headings;
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 400;
+    color: $color-white;
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+  }
+
+  &__text {
+    font-family: $font-sans;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba($color-white, 0.75);
+    margin-bottom: 2.5rem;
+  }
+
+  &__btn {
+    display: inline-block;
+    background-color: $color-accent;
+    color: $color-white;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-family: $font-headings;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    outline: none;
+
+    &:hover, &:focus {
+      background-color: color.scale($color-accent, $lightness: -12%);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}
