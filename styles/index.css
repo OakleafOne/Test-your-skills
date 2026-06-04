@@ -207,4 +207,107 @@ body {
 }
 .main-nav__link:hover::after, .main-nav__link:focus::after {
   width: 100%;
+}
+
+.why-choose {
+  padding: 6rem 2rem;
+  background: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url("../images/castle-background.png") no-repeat center center/cover;
+  color: #FFFFFF;
+}
+.why-choose__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+@media (max-width: 900px) {
+  .why-choose__container {
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+  }
+}
+.why-choose__content {
+  flex: 1;
+}
+.why-choose__title {
+  font-family: "Aleo", serif;
+  font-size: clamp(1.8rem, 4vw, 2.25rem);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05rem;
+}
+.why-choose__text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 3rem;
+}
+.why-choose__text p {
+  margin-bottom: 1.5rem;
+}
+.why-choose__btn {
+  display: inline-block;
+  background-color: #5474FD;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 1rem 2.25rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  outline: none;
+}
+.why-choose__btn:hover, .why-choose__btn:focus {
+  background-color: rgb(34.0343930636, 75.3846820809, 252.4156069364);
+}
+.why-choose__btn:active {
+  transform: scale(0.98);
+}
+.why-choose__gallery {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 360px;
+}
+@media (max-width: 900px) {
+  .why-choose__gallery {
+    max-width: 400px;
+    height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .why-choose__gallery {
+    height: 220px;
+  }
+}
+.why-choose__img-wrapper {
+  position: absolute;
+  width: 65%;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.why-choose__img-wrapper--top {
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.why-choose__img-wrapper--bottom {
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.why-choose__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */
